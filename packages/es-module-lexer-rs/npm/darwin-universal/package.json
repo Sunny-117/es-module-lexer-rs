@@ -1,0 +1,20 @@
+{
+  "name": "es-module-lexer-rs-darwin-universal",
+  "version": "0.1.0",
+  "description": "es-module-lexer-rs native bindings for macOS universal (x64 + ARM64)",
+  "main": "es-module-lexer-rs-native.darwin-universal.node",
+  "files": [
+    "es-module-lexer-rs-native.darwin-universal.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "os": [
+    "darwin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sunny-117/es-module-lexer-rs.git"
+  }
+}

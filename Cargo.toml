@@ -1,0 +1,23 @@
+[workspace]
+members = [
+  "crates/es-module-lexer",
+  "crates/es-module-lexer-wasm",
+  "packages/es-module-lexer-rs/native"
+]
+resolver = "2"
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+authors = ["es-module-lexer-rs contributors"]
+license = "MIT"
+repository = "https://github.com/Sunny-117/es-module-lexer-rs"
+
+[workspace.dependencies]
+thiserror = "1.0"
+
+[profile.release]
+lto = true
+codegen-units = 1
+opt-level = 3
+strip = true

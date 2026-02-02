@@ -1,0 +1,26 @@
+{
+  "name": "es-module-lexer-rs-linux-x64-gnu",
+  "version": "0.1.0",
+  "description": "es-module-lexer-rs native bindings for Linux x64 (glibc)",
+  "main": "es-module-lexer-rs-native.linux-x64-gnu.node",
+  "files": [
+    "es-module-lexer-rs-native.linux-x64-gnu.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "libc": [
+    "glibc"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sunny-117/es-module-lexer-rs.git"
+  }
+}

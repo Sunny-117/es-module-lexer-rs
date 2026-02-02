@@ -1,0 +1,23 @@
+{
+  "name": "es-module-lexer-rs-darwin-x64",
+  "version": "0.1.0",
+  "description": "es-module-lexer-rs native bindings for macOS x64",
+  "main": "es-module-lexer-rs-native.darwin-x64.node",
+  "files": [
+    "es-module-lexer-rs-native.darwin-x64.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sunny-117/es-module-lexer-rs.git"
+  }
+}

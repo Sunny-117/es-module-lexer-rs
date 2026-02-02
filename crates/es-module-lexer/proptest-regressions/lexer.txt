@@ -1,0 +1,10 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 442ac8b2d19d635efa3489f3bee3050705b704e96e5de0fba4a9e55c41be93eb # shrinks to import = "import foo from 'bar';", code = "const x = 1;"
+cc 4a98d9473951d233d8d6268dd376945548378061715d7b81404c127ddc1cee0b # shrinks to export = "export const x = 1;", code = "const x = 1;"
+cc 3e3f59bc1c72d4764fd8b2045fd01fd6e80151529859befb04ac1a2eecf78823 # shrinks to module = "export const x = 1;\n"
+cc 381fe39cef032c4fb21c8180f6e7aebf62f1807c3b9f68c7424a7c6382e687ab # shrinks to module = "import('dynamic');\n"

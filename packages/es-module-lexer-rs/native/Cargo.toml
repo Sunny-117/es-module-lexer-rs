@@ -1,0 +1,20 @@
+[package]
+name = "es-module-lexer-rs-native"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+es-module-lexer = { path = "../../../crates/es-module-lexer" }
+napi = { version = "2.16", features = ["napi8"] }
+napi-derive = "2.16"
+
+[build-dependencies]
+napi-build = "2.1"
+
+[dev-dependencies]
+proptest = "1.4"

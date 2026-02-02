@@ -1,0 +1,23 @@
+{
+  "name": "es-module-lexer-rs-win32-x64-msvc",
+  "version": "0.1.0",
+  "description": "es-module-lexer-rs native bindings for Windows x64 (MSVC)",
+  "main": "es-module-lexer-rs-native.win32-x64-msvc.node",
+  "files": [
+    "es-module-lexer-rs-native.win32-x64-msvc.node"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "os": [
+    "win32"
+  ],
+  "cpu": [
+    "x64"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sunny-117/es-module-lexer-rs.git"
+  }
+}

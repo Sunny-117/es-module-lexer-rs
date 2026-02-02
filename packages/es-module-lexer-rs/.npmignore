@@ -1,0 +1,46 @@
+# Source files
+src/
+native/src/
+native/target/
+native/Cargo.toml
+native/Cargo.lock
+native/build.rs
+
+# Test files
+tests/
+bench/
+*.test.ts
+*.bench.ts
+
+# Config files
+tsconfig.json
+vitest.config.ts
+vitest.config.full.ts
+.oxlintrc.json
+
+# Build artifacts
+target/
+artifacts/
+
+# Development files
+.DS_Store
+*.log
+*.swp
+*.swo
+*~
+
+# Git
+.git/
+.gitignore
+
+# CI/CD
+.github/
+
+# Documentation (except README)
+docs/
+
+# Scripts
+scripts/
+
+# npm directory (platform packages)
+npm/

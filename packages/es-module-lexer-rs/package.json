@@ -1,0 +1,96 @@
+{
+  "name": "es-module-lexer-rs",
+  "version": "0.1.0",
+  "description": "Rust implementation of es-module-lexer with Node.js bindings",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.js"
+    }
+  },
+  "napi": {
+    "name": "es-module-lexer-rs-native",
+    "triples": {
+      "defaults": true,
+      "additional": [
+        "x86_64-unknown-linux-gnu",
+        "aarch64-unknown-linux-gnu",
+        "x86_64-apple-darwin",
+        "aarch64-apple-darwin",
+        "x86_64-pc-windows-msvc"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "pnpm build:rust && pnpm build:ts",
+    "build:rust": "napi build --release --cargo-cwd native",
+    "build:ts": "tsc",
+    "artifacts": "napi artifacts --cargo-cwd native",
+    "prepublishOnly": "pnpm build",
+    "version": "napi version --cargo-cwd native",
+    "sync-versions": "node scripts/sync-versions.js",
+    "test": "vitest run",
+    "test:full": "vitest run --config vitest.config.full.ts",
+    "test:watch": "vitest",
+    "bench": "vitest bench --run",
+    "bench:comparison": "vitest bench --run bench/comparison.bench.ts",
+    "bench:real-world": "vitest bench --run bench/real-world.bench.ts",
+    "lint": "oxlint src",
+    "format": "oxfmt src"
+  },
+  "files": [
+    "dist",
+    "*.node",
+    "index.js",
+    "index.d.ts",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "es-module",
+    "lexer",
+    "parser",
+    "import",
+    "export",
+    "rust",
+    "napi"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@napi-rs/cli": "^2.18.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "es-module-lexer": "^2.0.0",
+    "fast-check": "^4.5.3",
+    "oxc-transform": "^0.30.0",
+    "oxfmt": "^0.27.0",
+    "oxlint": "^1.42.0",
+    "tsdown": "^0.2.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "optionalDependencies": {
+    "es-module-lexer-rs-darwin-x64": "0.1.0",
+    "es-module-lexer-rs-darwin-arm64": "0.1.0",
+    "es-module-lexer-rs-darwin-universal": "0.1.0",
+    "es-module-lexer-rs-linux-x64-gnu": "0.1.0",
+    "es-module-lexer-rs-linux-arm64-gnu": "0.1.0",
+    "es-module-lexer-rs-win32-x64-msvc": "0.1.0",
+    "es-module-lexer-rs-freebsd-x64": "0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sunny-117/es-module-lexer-rs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sunny-117/es-module-lexer-rs/issues"
+  },
+  "homepage": "https://github.com/Sunny-117/es-module-lexer-rs#readme"
+}

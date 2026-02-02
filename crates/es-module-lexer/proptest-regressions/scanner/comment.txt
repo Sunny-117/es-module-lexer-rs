@@ -1,0 +1,8 @@
+# Seeds for failure cases proptest has generated in the past. It is
+# automatically read and these particular cases re-run before any
+# novel cases are generated.
+#
+# It is recommended to check this file in to source control so that
+# everyone who runs the test benefits from these saved cases.
+cc 6f8d766939e258ddcf43e6a90cacf65bf405d2d60f514f83f72309c358124f7f # shrinks to keyword = "import", rest = "\r¡"
+cc a5a78ed8dc8a5b6f15220bc5e2bcc276dca4cb1e5028c8ca997ec2f8911cd91b # shrinks to whitespace1 = "", comment1 = "// import foo from 'bar'", whitespace2 = "", comment2 = "// import foo from 'bar'", whitespace3 = "", code = "A"

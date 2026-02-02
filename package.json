@@ -1,0 +1,22 @@
+{
+  "name": "es-module-lexer-rs-monorepo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Rust implementation of es-module-lexer with Node.js bindings",
+  "scripts": {
+    "build": "pnpm -r build",
+    "build:main": "pnpm --filter es-module-lexer-rs build",
+    "test": "pnpm -r test",
+    "lint": "pnpm -r lint",
+    "format": "pnpm -r format",
+    "publish:platforms": "cd packages/es-module-lexer-rs && ./scripts/publish-platform-packages.sh"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  }
+}

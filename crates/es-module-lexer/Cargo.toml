@@ -1,0 +1,20 @@
+[package]
+name = "es-module-lexer"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Fast lexer for ES module imports and exports"
+
+[dependencies]
+thiserror.workspace = true
+smallvec = "1.13"
+
+[dev-dependencies]
+proptest = "1.4"
+criterion = "0.5"
+
+[[bench]]
+name = "lexer_bench"
+harness = false

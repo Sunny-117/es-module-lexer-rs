@@ -1,0 +1,45 @@
+{
+  "name": "@es-module-lexer-rs/wasm",
+  "version": "0.1.0",
+  "description": "WebAssembly implementation of es-module-lexer in Rust",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist",
+    "*.wasm"
+  ],
+  "scripts": {
+    "build": "pnpm build:wasm && pnpm build:ts",
+    "build:wasm": "wasm-pack build ../../crates/es-module-lexer-wasm --target web --out-dir ../../packages/es-module-lexer-rs-wasm/wasm --out-name index",
+    "build:ts": "tsc",
+    "test": "vitest run",
+    "bench": "vitest bench --run"
+  },
+  "keywords": [
+    "es-module",
+    "lexer",
+    "parser",
+    "import",
+    "export",
+    "rust",
+    "wasm",
+    "webassembly"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.11.0",
+    "es-module-lexer": "^2.0.0",
+    "typescript": "^5.3.3",
+    "vitest": "^1.2.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
