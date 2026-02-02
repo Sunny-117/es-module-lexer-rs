@@ -2,7 +2,7 @@
 
 > ⚠️ **Work In Progress** - This project is under active development. Do not use in production environments.
 
-A Rust implementation of [es-module-lexer](https://github.com/guybedford/es-module-lexer) with Node.js bindings via napi-rs.
+🦀 A Rust implementation of [es-module-lexer](https://github.com/guybedford/es-module-lexer) with Node.js bindings via napi-rs.
 
 Fast JavaScript ES module lexer that outputs the list of exports and locations of import specifiers, including dynamic import and import meta handling. Built with Rust for memory safety and maintainability.
 
